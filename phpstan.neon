@@ -1,0 +1,25 @@
+includes:
+    - vendor/larastan/larastan/extension.neon
+
+parameters:
+    paths:
+        - src
+        - config
+        - database
+    tmpDir: build/phpstan
+
+    # Level 9 is the highest level
+    level: 9
+
+    checkModelProperties: true
+
+    databaseMigrationsPath:
+        - database/migrations
+
+#    ignoreErrors:
+#        - '#PHPDoc tag @var#'
+#
+#    excludePaths:
+#        - ./*/*/FileToBeExcluded.php
+#
+#    checkMissingIterableValueType: false

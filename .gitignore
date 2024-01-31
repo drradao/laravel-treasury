@@ -1,0 +1,11 @@
+# IDE directories
+.idea/
+.vscode/
+
+# Composer files
+/vendor/
+composer.lock
+
+# Local build directory
+build/
+/.phpunit.result.cache

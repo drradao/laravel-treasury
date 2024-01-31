@@ -1,0 +1,52 @@
+{
+    "name": "drradao/laravel-treasury",
+    "description": "A treasury package to manage internal currency of your app",
+    "type": "library",
+    "authors": [
+        {
+            "name": "David Adão",
+            "email": "drradao@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "illuminate/support": "^9.0|^10.0",
+        "illuminate/database": "^9.0|^10.0"
+    },
+    "scripts": {
+        "lint": "@php vendor/bin/pint -v",
+        "test:lint": "@php vendor/bin/pint --test -v",
+        "test:types": "@php vendor/bin/phpstan analyse --ansi --memory-limit=2G",
+        "test:unit": "@php vendor/bin/pest -p --colors=always",
+        "test": [
+            "@test:lint",
+            "@test:types",
+            "@test:unit"
+        ]
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Drradao\\LaravelTreasury\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Drradao\\LaravelTreasury\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require-dev": {
+        "pestphp/pest": "^1.0",
+        "pestphp/pest-plugin-laravel": "^1.4",
+        "orchestra/testbench": "^8.21",
+        "pestphp/pest-plugin-parallel": "^1.2",
+        "laravel/pint": "^1.13",
+        "larastan/larastan": "^2.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
