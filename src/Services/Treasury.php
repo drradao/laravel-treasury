@@ -38,7 +38,7 @@ class Treasury
 
             $this->currencies[$currency] = new CurrencySettings(
                 name: $currency,
-                limit: $settings['limit'],
+                maxBalance: $settings['limit'],
             );
         }
     }

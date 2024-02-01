@@ -27,7 +27,8 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Drradao\\LaravelTreasury\\": "src/"
+            "Drradao\\LaravelTreasury\\": "src/",
+            "Drradao\\LaravelTreasury\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {

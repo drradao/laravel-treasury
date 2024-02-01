@@ -1,6 +1,5 @@
 <?php
 
-use Drradao\LaravelTreasury\Exceptions\InvalidConfig;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -23,7 +22,7 @@ return new class extends Migration
             $table->string('currency', 64);
             $table->unsignedMediumInteger('balance')->default(0);
 
-            $table->index(['owner_type', 'owner_id', 'currency']);
+            $table->unique(['owner_type', 'owner_id', 'currency']);
 
             $table->timestamps();
         });
