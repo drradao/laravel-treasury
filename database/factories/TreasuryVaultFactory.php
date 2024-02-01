@@ -11,6 +11,8 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class TreasuryVaultFactory extends Factory
 {
+    protected $model = \DRRAdao\LaravelTreasury\Models\TreasuryVault::class;
+
     /**
      * Define the model's default state.
      *

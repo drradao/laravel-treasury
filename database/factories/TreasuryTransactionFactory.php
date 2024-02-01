@@ -12,6 +12,8 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class TreasuryTransactionFactory extends Factory
 {
+    protected $model = \DRRAdao\LaravelTreasury\Models\TreasuryTransaction::class;
+
     /**
      * Define the model's default state.
      *
@@ -22,6 +24,19 @@ class TreasuryTransactionFactory extends Factory
         return [
             //
         ];
+    }
+
+    /**
+     * State: Random amount and type
+     */
+    public function random(int $min = 1, int $max = 100): static
+    {
+        return $this->state(function (array $attributes) use ($min, $max) {
+            return [
+                'amount' => $this->faker->numberBetween($min, $max),
+                'type' => rand() ? TransactionType::Credit->value : TransactionType::Debit->value,
+            ];
+        });
     }
 
     /**
