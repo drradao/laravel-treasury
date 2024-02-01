@@ -29,11 +29,16 @@ class CurrencyVault
     ) {
         $this->currencySettings = Treasury::currency($currencyName);
 
-        $this->vault = TreasuryVault::firstOrCreate([
-            'owner_id' => $owner->getKey(),
-            'owner_type' => $owner::class,
-            'currency' => $currencyName,
-        ]);
+        $this->vault = TreasuryVault::firstOrCreate(
+            [
+                'owner_id' => $owner->getKey(),
+                'owner_type' => $owner::class,
+                'currency' => $currencyName,
+            ],
+            [
+                'balance' => 0,
+            ]
+        );
     }
 
     /**
@@ -51,7 +56,7 @@ class CurrencyVault
      * @throws Exceptions\ExceedsMaximumBalance
      * @throws Exceptions\FailedToExecuteTransaction
      */
-    public function credit(int $amount): static
+    public function credit(int $amount, ?string $description = null): static
     {
         if ($amount < 0) {
             throw new Exceptions\NegativeAmoutPassed($amount);
@@ -70,6 +75,7 @@ class CurrencyVault
             $this->vault->transactions()->create([
                 'type' => TransactionType::Credit,
                 'amount' => $amount,
+                'description' => $description,
             ]);
 
             $this->vault->increment('balance', $amount);
@@ -94,7 +100,7 @@ class CurrencyVault
      * @throws Exceptions\InsufficientFunds
      * @throws Exceptions\FailedToExecuteTransaction
      */
-    public function debit(int $amount): static
+    public function debit(int $amount, ?string $description = null): static
     {
         if ($amount < 0) {
             throw new Exceptions\NegativeAmoutPassed($amount);
@@ -112,6 +118,7 @@ class CurrencyVault
             $this->vault->transactions()->create([
                 'type' => TransactionType::Debit,
                 'amount' => $amount,
+                'description' => $description,
             ]);
 
             $this->vault->decrement('balance', $amount);

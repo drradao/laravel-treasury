@@ -15,6 +15,7 @@ class TreasuryVault extends Model
         'currency',
         'owner_id',
         'owner_type',
+        'balance',
     ];
 
     /**
