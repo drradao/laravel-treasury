@@ -36,8 +36,7 @@ class TreasuryTransaction extends Model
     /**
      * Scope a query to only include debits.
      *
-     * @param Builder<TreasuryTransaction> $query
-     *
+     * @param  Builder<TreasuryTransaction>  $query
      * @return Builder<TreasuryTransaction>
      */
     public function scopeDebit(Builder $query): Builder
@@ -48,8 +47,7 @@ class TreasuryTransaction extends Model
     /**
      * Scope a query to only include credits.
      *
-     * @param Builder<TreasuryTransaction> $query
-     *
+     * @param  Builder<TreasuryTransaction>  $query
      * @return Builder<TreasuryTransaction>
      */
     public function scopeCredit(Builder $query): Builder
@@ -60,8 +58,7 @@ class TreasuryTransaction extends Model
     /**
      * Scope by type
      *
-     * @param Builder<TreasuryTransaction> $query
-     *
+     * @param  Builder<TreasuryTransaction>  $query
      * @return Builder<TreasuryTransaction>
      */
     public function scopeType(Builder $query, TransactionType $type): Builder
