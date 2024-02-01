@@ -8,7 +8,7 @@ return [
      */
     'currencies' => [
         'credits' => [
-            'limit' => 16777215, // Max value of a unsigned medium integer
+            'max_balance' => 16777215, // Max value of a unsigned medium integer
         ],
     ],
 ];

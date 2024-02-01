@@ -32,13 +32,13 @@ class Treasury
         }
 
         foreach ($currencies as $currency => $settings) {
-            if (! is_array($settings) || ! isset($settings['limit'])) {
+            if (! is_array($settings) || ! isset($settings['max_balance'])) {
                 throw new InvalidConfig('Invalid currencies config');
             }
 
             $this->currencies[$currency] = new CurrencySettings(
                 name: $currency,
-                maxBalance: $settings['limit'],
+                maxBalance: $settings['max_balance'],
             );
         }
     }
