@@ -2,14 +2,14 @@
 
 namespace DRRAdao\LaravelTreasury\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use DRRAdao\LaravelTreasury\Traits\HasPackageFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 
 class TreasuryVault extends Model
 {
-    use HasFactory;
+    use HasPackageFactory;
 
     protected $fillable = [
         'currency',

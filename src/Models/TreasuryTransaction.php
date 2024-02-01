@@ -3,13 +3,13 @@
 namespace DRRAdao\LaravelTreasury\Models;
 
 use DRRAdao\LaravelTreasury\Enums\TransactionType;
+use DRRAdao\LaravelTreasury\Traits\HasPackageFactory;
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class TreasuryTransaction extends Model
 {
-    use HasFactory;
+    use HasPackageFactory;
 
     protected $fillable = [
         'vault_id',
