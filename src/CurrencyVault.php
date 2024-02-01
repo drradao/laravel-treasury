@@ -143,7 +143,7 @@ class CurrencyVault
      *
      * @throws Exceptions\FailedToSyncBalance
      */
-    public function sync(): static
+    public function syncBalance(): static
     {
         $balance = 0;
 
