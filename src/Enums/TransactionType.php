@@ -1,6 +1,6 @@
 <?php
 
-namespace Drradao\LaravelTreasury\Enums;
+namespace DRRAdao\LaravelTreasury\Enums;
 
 enum TransactionType: string
 {

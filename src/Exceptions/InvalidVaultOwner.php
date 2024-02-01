@@ -1,6 +1,6 @@
 <?php
 
-namespace Drradao\LaravelTreasury\Exceptions;
+namespace DRRAdao\LaravelTreasury\Exceptions;
 
 class InvalidVaultOwner extends TreasuryException
 {

@@ -1,12 +1,12 @@
 <?php
 
-namespace Drradao\LaravelTreasury\Database\Factories;
+namespace DRRAdao\LaravelTreasury\Database\Factories;
 
-use Drradao\LaravelTreasury\Enums\TransactionType;
+use DRRAdao\LaravelTreasury\Enums\TransactionType;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @template TModel of \Drradao\LaravelTreasury\Models\TreasuryTransaction
+ * @template TModel of \DRRAdao\LaravelTreasury\Models\TreasuryTransaction
  *
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<TModel>
  */

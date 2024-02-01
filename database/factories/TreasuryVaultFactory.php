@@ -1,11 +1,11 @@
 <?php
 
-namespace Drradao\LaravelTreasury\Database\Factories;
+namespace DRRAdao\LaravelTreasury\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @template TModel of \Drradao\LaravelTreasury\Models\TreasuryVault
+ * @template TModel of \DRRAdao\LaravelTreasury\Models\TreasuryVault
  *
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<TModel>
  */

@@ -1,10 +1,10 @@
 <?php
 
-namespace Drradao\LaravelTreasury;
+namespace DRRAdao\LaravelTreasury;
 
-use Drradao\LaravelTreasury\Contracts\VaultOwner;
-use Drradao\LaravelTreasury\Exceptions\InvalidCurrency;
-use Drradao\LaravelTreasury\Exceptions\InvalidVaultOwner;
+use DRRAdao\LaravelTreasury\Contracts\VaultOwner;
+use DRRAdao\LaravelTreasury\Exceptions\InvalidCurrency;
+use DRRAdao\LaravelTreasury\Exceptions\InvalidVaultOwner;
 use Illuminate\Database\Eloquent\Model;
 
 class TreasureKeeper

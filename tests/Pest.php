@@ -11,4 +11,4 @@
 |
 */
 
-uses(\Drradao\LaravelTreasury\Tests\TestCase::class)->in('Unit');
+uses(\DRRAdao\LaravelTreasury\Tests\TestCase::class)->in('Unit');

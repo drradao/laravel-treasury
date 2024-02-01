@@ -1,8 +1,8 @@
 <?php
 
-namespace Drradao\LaravelTreasury\Exceptions;
+namespace DRRAdao\LaravelTreasury\Exceptions;
 
-use Drradao\LaravelTreasury\Enums\TransactionType;
+use DRRAdao\LaravelTreasury\Enums\TransactionType;
 
 class FailedToExecuteTransaction extends TreasuryException
 {

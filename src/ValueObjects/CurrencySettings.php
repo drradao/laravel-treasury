@@ -1,6 +1,6 @@
 <?php
 
-namespace Drradao\LaravelTreasury\ValueObjects;
+namespace DRRAdao\LaravelTreasury\ValueObjects;
 
 class CurrencySettings
 {

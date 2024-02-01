@@ -1,6 +1,6 @@
 <?php
 
-namespace Drradao\LaravelTreasury\Exceptions;
+namespace DRRAdao\LaravelTreasury\Exceptions;
 
 abstract class TreasuryException extends \Exception
 {

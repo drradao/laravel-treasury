@@ -1,9 +1,9 @@
 <?php
 
-namespace Drradao\LaravelTreasury\Facades;
+namespace DRRAdao\LaravelTreasury\Facades;
 
-use Drradao\LaravelTreasury\TreasureKeeper;
-use Drradao\LaravelTreasury\ValueObjects\CurrencySettings;
+use DRRAdao\LaravelTreasury\TreasureKeeper;
+use DRRAdao\LaravelTreasury\ValueObjects\CurrencySettings;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Facade;
 
@@ -15,6 +15,6 @@ class Treasury extends Facade
 {
     protected static function getFacadeAccessor(): string
     {
-        return \Drradao\LaravelTreasury\Services\Treasury::class;
+        return \DRRAdao\LaravelTreasury\Services\Treasury::class;
     }
 }

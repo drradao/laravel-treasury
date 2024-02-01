@@ -1,9 +1,9 @@
 <?php
 
-namespace Drradao\LaravelTreasury\Traits;
+namespace DRRAdao\LaravelTreasury\Traits;
 
-use Drradao\LaravelTreasury\Exceptions\InvalidCurrency;
-use Drradao\LaravelTreasury\Facades\Treasury;
+use DRRAdao\LaravelTreasury\Exceptions\InvalidCurrency;
+use DRRAdao\LaravelTreasury\Facades\Treasury;
 
 trait HasVaults
 {
@@ -21,7 +21,7 @@ trait HasVaults
 
     public function treasuryVaults(): \Illuminate\Database\Eloquent\Relations\MorphMany
     {
-        return $this->morphMany(\Drradao\LaravelTreasury\Models\TreasuryVault::class, 'owner');
+        return $this->morphMany(\DRRAdao\LaravelTreasury\Models\TreasuryVault::class, 'owner');
     }
 
     /**
@@ -30,7 +30,7 @@ trait HasVaults
      * @throws InvalidVaultOwner
      * @throws InvalidCurrency
      */
-    public function vault(string $name): \Drradao\LaravelTreasury\CurrencyVault
+    public function vault(string $name): \DRRAdao\LaravelTreasury\CurrencyVault
     {
         return Treasury::of($this)->currency($name);
     }

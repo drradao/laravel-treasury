@@ -1,6 +1,6 @@
 <?php
 
-namespace Drradao\LaravelTreasury\Tests;
+namespace DRRAdao\LaravelTreasury\Tests;
 
 use Orchestra\Testbench\TestCase as BaseTestCase;
 
@@ -9,7 +9,7 @@ abstract class TestCase extends BaseTestCase
     protected function getPackageProviders($app): array
     {
         return [
-            \Drradao\LaravelTreasury\TreasuryServiceProvider::class,
+            \DRRAdao\LaravelTreasury\TreasuryServiceProvider::class,
         ];
     }
 

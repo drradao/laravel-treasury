@@ -1,12 +1,12 @@
 <?php
 
-namespace Drradao\LaravelTreasury\Services;
+namespace DRRAdao\LaravelTreasury\Services;
 
-use Drradao\LaravelTreasury\Exceptions\InvalidConfig;
-use Drradao\LaravelTreasury\Exceptions\InvalidCurrency;
-use Drradao\LaravelTreasury\Exceptions\InvalidVaultOwner;
-use Drradao\LaravelTreasury\TreasureKeeper;
-use Drradao\LaravelTreasury\ValueObjects\CurrencySettings;
+use DRRAdao\LaravelTreasury\Exceptions\InvalidConfig;
+use DRRAdao\LaravelTreasury\Exceptions\InvalidCurrency;
+use DRRAdao\LaravelTreasury\Exceptions\InvalidVaultOwner;
+use DRRAdao\LaravelTreasury\TreasureKeeper;
+use DRRAdao\LaravelTreasury\ValueObjects\CurrencySettings;
 use Illuminate\Database\Eloquent\Model;
 
 class Treasury

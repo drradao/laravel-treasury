@@ -27,13 +27,13 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Drradao\\LaravelTreasury\\": "src/",
-            "Drradao\\LaravelTreasury\\Database\\Factories\\": "database/factories/"
+            "DRRAdao\\LaravelTreasury\\": "src/",
+            "DRRAdao\\LaravelTreasury\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Drradao\\LaravelTreasury\\Tests\\": "tests/"
+            "DRRAdao\\LaravelTreasury\\Tests\\": "tests/"
         }
     },
     "minimum-stability": "stable",

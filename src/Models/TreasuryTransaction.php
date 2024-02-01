@@ -1,8 +1,8 @@
 <?php
 
-namespace Drradao\LaravelTreasury\Models;
+namespace DRRAdao\LaravelTreasury\Models;
 
-use Drradao\LaravelTreasury\Enums\TransactionType;
+use DRRAdao\LaravelTreasury\Enums\TransactionType;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;

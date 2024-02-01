@@ -1,8 +1,8 @@
 <?php
 
-namespace Drradao\LaravelTreasury\Contracts;
+namespace DRRAdao\LaravelTreasury\Contracts;
 
-use Drradao\LaravelTreasury\Models\TreasuryVault;
+use DRRAdao\LaravelTreasury\Models\TreasuryVault;
 
 interface VaultOwner
 {

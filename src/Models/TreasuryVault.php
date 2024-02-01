@@ -1,6 +1,6 @@
 <?php
 
-namespace Drradao\LaravelTreasury\Models;
+namespace DRRAdao\LaravelTreasury\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;

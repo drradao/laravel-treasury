@@ -1,8 +1,8 @@
 <?php
 
-namespace Drradao\LaravelTreasury;
+namespace DRRAdao\LaravelTreasury;
 
-use Drradao\LaravelTreasury\Services\Treasury;
+use DRRAdao\LaravelTreasury\Services\Treasury;
 use Illuminate\Support\ServiceProvider;
 
 class TreasuryServiceProvider extends ServiceProvider

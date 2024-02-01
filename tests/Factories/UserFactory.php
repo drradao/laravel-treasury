@@ -1,12 +1,12 @@
 <?php
 
-namespace Drradao\LaravelTreasury\Tests\Factories;
+namespace DRRAdao\LaravelTreasury\Tests\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class UserFactory extends Factory
 {
-    protected $model = \Drradao\LaravelTreasury\Tests\Models\User::class;
+    protected $model = \DRRAdao\LaravelTreasury\Tests\Models\User::class;
 
     public function definition(): array
     {

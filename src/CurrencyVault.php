@@ -1,13 +1,13 @@
 <?php
 
-namespace Drradao\LaravelTreasury;
+namespace DRRAdao\LaravelTreasury;
 
 use Carbon\CarbonInterface;
-use Drradao\LaravelTreasury\Enums\TransactionType;
-use Drradao\LaravelTreasury\Facades\Treasury;
-use Drradao\LaravelTreasury\Models\TreasuryTransaction;
-use Drradao\LaravelTreasury\Models\TreasuryVault;
-use Drradao\LaravelTreasury\ValueObjects\CurrencySettings;
+use DRRAdao\LaravelTreasury\Enums\TransactionType;
+use DRRAdao\LaravelTreasury\Facades\Treasury;
+use DRRAdao\LaravelTreasury\Models\TreasuryTransaction;
+use DRRAdao\LaravelTreasury\Models\TreasuryVault;
+use DRRAdao\LaravelTreasury\ValueObjects\CurrencySettings;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;

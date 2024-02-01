@@ -1,7 +1,7 @@
 <?php
 
-use Drradao\LaravelTreasury\CurrencyVault;
-use Drradao\LaravelTreasury\Tests\Models\User;
+use DRRAdao\LaravelTreasury\CurrencyVault;
+use DRRAdao\LaravelTreasury\Tests\Models\User;
 
 it('can add to balance', function () {
     $user = User::factory()->create();
@@ -36,7 +36,7 @@ it('doesnot allow negative balance', function () {
     );
 
     $currencyVault->debit(100);
-})->throws(\Drradao\LaravelTreasury\Exceptions\InsufficientFunds::class);
+})->throws(\DRRAdao\LaravelTreasury\Exceptions\InsufficientFunds::class);
 
 it('doesn\'t allow negative amounts', function () {
     $user = User::factory()->create();
@@ -46,9 +46,9 @@ it('doesn\'t allow negative amounts', function () {
     );
 
     expect(fn () => $currencyVault->credit(-100))
-        ->toThrow(\Drradao\LaravelTreasury\Exceptions\NegativeAmoutPassed::class);
+        ->toThrow(\DRRAdao\LaravelTreasury\Exceptions\NegativeAmoutPassed::class);
     expect(fn () => $currencyVault->debit(-100))
-        ->toThrow(\Drradao\LaravelTreasury\Exceptions\NegativeAmoutPassed::class);
+        ->toThrow(\DRRAdao\LaravelTreasury\Exceptions\NegativeAmoutPassed::class);
 });
 
 it('validates the max balance', function () {
@@ -61,4 +61,4 @@ it('validates the max balance', function () {
     );
 
     $currencyVault->credit(101);
-})->throws(\Drradao\LaravelTreasury\Exceptions\ExceedsMaximumBalance::class);
+})->throws(\DRRAdao\LaravelTreasury\Exceptions\ExceedsMaximumBalance::class);
