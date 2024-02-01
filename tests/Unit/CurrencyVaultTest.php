@@ -1,6 +1,8 @@
 <?php
 
 use DRRAdao\LaravelTreasury\CurrencyVault;
+use DRRAdao\LaravelTreasury\Models\TreasuryTransaction;
+use DRRAdao\LaravelTreasury\Models\TreasuryVault;
 use DRRAdao\LaravelTreasury\Tests\Models\User;
 
 it('can add to balance', function () {
@@ -62,3 +64,65 @@ it('validates the max balance', function () {
 
     $currencyVault->credit(101);
 })->throws(\DRRAdao\LaravelTreasury\Exceptions\ExceedsMaximumBalance::class);
+
+it('can sync balance', function () {
+    $user = User::factory()->create();
+    TreasuryVault::factory()
+        ->for($user, 'owner')
+        ->currency('credits')
+        ->has(
+            TreasuryTransaction::factory()
+                ->count(2)
+                ->sequence(
+                    [
+                        'amount' => 125,
+                        'type' => \DRRAdao\LaravelTreasury\Enums\TransactionType::Credit,
+                    ],
+                    [
+                        'amount' => 75,
+                        'type' => \DRRAdao\LaravelTreasury\Enums\TransactionType::Debit,
+                    ],
+                ),
+            'transactions'
+        )
+        ->create();
+
+    $vault = $user->treasuryVaults()->with('transactions')->first();
+
+    expect($vault)
+        ->balance
+        ->toBe(0)
+        ->transactions
+        ->toHaveCount(2);
+
+    $vault = $user->vault('credits')->syncBalance();
+
+    expect($vault)
+        ->balance()
+        ->toBe(50);
+});
+
+it('fails to sync negative balance', function () {
+    $user = User::factory()->create();
+    TreasuryVault::factory()
+        ->for($user, 'owner')
+        ->currency('credits')
+        ->has(
+            TreasuryTransaction::factory()
+                ->count(2)
+                ->sequence(
+                    [
+                        'amount' => 100,
+                        'type' => \DRRAdao\LaravelTreasury\Enums\TransactionType::Credit,
+                    ],
+                    [
+                        'amount' => 200,
+                        'type' => \DRRAdao\LaravelTreasury\Enums\TransactionType::Debit,
+                    ],
+                ),
+            'transactions'
+        )
+        ->create();
+
+    $user->vault('credits')->syncBalance();
+})->throws(\DRRAdao\LaravelTreasury\Exceptions\FailedToSyncBalance::class);
