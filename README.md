@@ -1,5 +1,7 @@
 # Laravel Treasury
 
+[![PHP Quality Checks](https://github.com/drradao/laravel-treasury/actions/workflows/main.yml/badge.svg)](https://github.com/drradao/laravel-treasury/actions/workflows/main.yml)
+
 ## Preface
 
 This package is still under development and is not ready for production use, it's kind of a proof of concept. I'll be using it in my own projects and will be updating it as I go. Feel free to use it at your own risk.
